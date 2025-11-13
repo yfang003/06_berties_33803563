@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bargain Books</title>
+</head>
+<body>
+    <h1>Bargain Books (Under £20)</h1>
+    <ul>
+        <% availableBooks.forEach(function(book) { %>
+            <li>
+                <strong><%= book.name %></strong> - £<%= book.price %>
+            </li>
+        <% }); %>
+    </ul>
+</body>
+</html>
