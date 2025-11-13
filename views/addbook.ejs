@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add a Book</title>
+    <link rel="stylesheet"  type="text/css" href="/main.css" />
+</head>
+<body>
+    <h1>Add a New Book</h1>
+
+    <form action="/books/bookadded" method="POST">
+        <div>
+            <label for="name">Book Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+
+        <div>
+            <label for="price">Price:</label>
+            <input type="number" id="price" name="price" step="0.01" required>
+        </div>
+
+        <button type="submit">Add Book</button>
+    </form>
+
+    <p><a href="/books/list">Back to book list</a></p>
+</body>
+</html>

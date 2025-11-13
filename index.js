@@ -12,7 +12,8 @@ const port = 8000
 app.set('view engine', 'ejs')
 
 // Set up the body parser 
-app.use(express.urlencoded({ extended: true }))
+app.use(express.urlencoded({ extended: false }))
+app.use(express.json());
 
 // Set up public folder (for css and static js)
 app.use(express.static(path.join(__dirname, 'public')))

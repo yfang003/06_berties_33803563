@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Berties Book Shop</title>
+    <link rel="stylesheet"  type="text/css" href="/main.css" />
+</head>
+<body>
+    <h1>Bertie's Books Shop</h1>
+    <p>Here are the books that we sell</p>
+
+    <ul>
+        <% availableBooks.forEach(function(book) { %>
+            <li>
+                <strong>
+                    <%= book.name %> - <%= book.price %>
+                </strong>
+            </li>
+        <% }); %>
+        </ul>   
+</body>
+</html>
