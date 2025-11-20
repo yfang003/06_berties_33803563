@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Berties Book Shop</title>
+    <link rel="stylesheet"  type="text/css" href="/main.css" />
+</head>
+<body>
+    <h1>Userlist</h1>
+    <p>Your info</p>
+
+    <ul>
+        <% users.forEach(function(user) { %>
+            <li>
+                <strong>
+                    <%= user.firstname %> - <%= user.lastname %> - <%= user.email %> - <%= user.username %>
+                </strong>
+            </li>
+        <% }) %>
+        </ul>   
+</body>
+</html>
