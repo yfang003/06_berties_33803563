@@ -42,3 +42,50 @@ For every login request, the system saves:
 - the timestamp
 
 This allows the system to track failed and successful login attempts for security monitoring.
+
+# Where Validation Was Added
+1. User Registration (/registered)
+
+I added server-side validation to ensure the user submits correct and safe data.
+email must be a valid email format
+username 5–20 characters, no spaces
+password minimum 8 characters, not empty
+firstname/lastname → cannot be empty
+
+2. User Login (/loggedin)
+
+username must not be empty
+password must not be empty
+
+3. Book Search (/search-result)
+
+keyword → must be 1–50 characters (no empty search)
+
+4. Add book(/bookdadded)
+
+name cannot be empty
+price must be a number and ≥ 0
+
+# Where Validation Was Not Added
+
+Static Pages such as home page, about page
+book list such as the /list and the /bargainbook
+
+Validation is applied only to routes that receive user input (registering, logging in, searching, adding books).
+Read-only pages or pages without form input do not need validation.
+
+# Where Sanitisation Was Added
+
+1. User Registration (/registered)
+
+the fist name, last name and the username
+
+These values are shown back to the user and also inserted into the database, so sanitising them prevents malicious HTML or JavaScript from running
+
+2. User Login (/loggedin)
+
+username is sanitised to avoid unexpected characters being submitted to the database.
+
+3. Add Book (/bookadded)
+
+I sanitised name and price
