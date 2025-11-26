@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS books (
 # Create the tables
 CREATE TABLE IF NOT EXISTS users (
     id     INT AUTO_INCREMENT,
-    username   VARCHAR(50),
+    username   VARCHAR(50) UNIQUE,
     firstname   VARCHAR(50),
     lastname   VARCHAR(50),
     email   VARCHAR(50),
