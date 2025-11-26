@@ -50,7 +50,7 @@ router.get('/list', function(req, res, next) {
     });
 });
 
-router.get('/addbook', redirectLogin, function(req, res, next) {
+router.get('/addbook', function(req, res, next) {
     res.render('addbook.ejs');
 });
 
