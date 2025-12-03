@@ -89,3 +89,18 @@ username is sanitised to avoid unexpected characters being submitted to the data
 3. Add Book (/bookadded)
 
 I sanitised name and price
+
+# API Features Summary
+
+This lab adds API functionality to the Bertie’s Books application.
+We created a new /api/books endpoint that returns book data in JSON format.
+The API supports several optional query parameters:
+
+search=keyword
+Filters books whose name contains the given keyword.
+
+minprice=value and maxprice=value
+Filters books within a specific price range.
+
+sort=name or sort=price
+Sorts the results by book name or price.
